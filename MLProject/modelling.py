@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 
 warnings.filterwarnings('ignore')
 
-mlflow.set_tracking_uri("http://127.0.0.1:5000/")
+
 mlflow.set_experiment("HeartDiagnosa")
 
 df = pd.read_csv('preprocessing/HeartDiagnosa_preprocessing.csv')
