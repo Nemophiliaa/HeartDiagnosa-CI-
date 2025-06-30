@@ -1,19 +1,19 @@
 name: Train MLflow Model CI
 
-on:
-  workflow_dispatch:
-  push:
-    paths:
+on: 
+  workflow_dispatch: 
+  push: 
+    paths: 
       - 'MLProject/**'
 
-jobs:
-  train:
-    runs-on: ubuntu-latest
-    steps:
+jobs: 
+  train: 
+    runs-on: ubuntu-latest    
+    steps: 
       - name: Checkout Repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  
+          persist-credentials: false
 
       - name: Setup Python
         uses: actions/setup-python@v4
@@ -27,21 +27,24 @@ jobs:
 
       - name: Run MLflow Project
         run: |
+          export MLFLOW_TRACKING_URI=./mlruns
           mlflow run MLProject --env-manager=local
 
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-        with:
-          persist-credentials: false
+      - name: Debug — List files
+        run: ls -R
 
       - name: Configure Git with PAT
         run: |
           git config --global user.name "Nemophiliaa"
-          git config --global user.email "hirose@example.com"
+          git config --global user.email "neemophilia@example.com"
           git remote set-url origin https://Nemophiliaa:${{ secrets.PAT }}@github.com/Nemophiliaa/HeartDiagnosa-CI-.git
 
       - name: Save mlruns to Repo
         run: |
-          git add mlruns/
-          git commit -m "save mlruns from CI" || echo "No changes to commit"
-          git push origin main
+          if [ -d "mlruns" ]; then
+            git add mlruns/
+            git commit -m "save mlruns from CI" || echo "No changes to commit"
+            git push origin main
+          else
+            echo "Folder mlruns/ tidak ditemukan. Gagal menyimpan artefak."
+          fi
