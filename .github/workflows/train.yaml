@@ -1,22 +1,24 @@
-name : Train MLflow Model CI 
+name: Train MLflow Model CI
 
-on: 
-  workflow_dispatch: 
-  push: 
-    paths: 
+on:
+  workflow_dispatch:
+  push:
+    paths:
       - 'MLProject/**'
 
-jobs: 
-  train: 
-    runs-on: ubuntu-latest    
-    steps: 
-      - name: Checkout Repository 
-        uses: actions/checkout@v3 
+jobs:
+  train:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  
 
-      - name: Setup Python 
+      - name: Setup Python
         uses: actions/setup-python@v4
-        with: 
-          python-version: '3.10.9' 
+        with:
+          python-version: '3.10.9'
 
       - name: Install dependencies
         run: |
@@ -25,7 +27,7 @@ jobs:
 
       - name: Run MLflow Project
         run: |
-          mlflow run MLProject --env-manager=local 
+          mlflow run MLProject --env-manager=local
 
       - name: Save mlruns to Repo
         run: |
@@ -35,12 +37,3 @@ jobs:
           git add mlruns/
           git commit -m "save mlruns from CI" || echo "No changes to commit"
           git push origin main
-
-
-         
-
-
-   
-
-
-
