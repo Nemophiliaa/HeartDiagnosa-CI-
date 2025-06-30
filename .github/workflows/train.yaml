@@ -32,7 +32,7 @@ jobs:
       - name: Configure Git with PAT
         run: |
           git config --global user.name "Nemophiliaa"
-          git config --global user.email "hirose@example.com"
+          git config --global user.email "neemophilia@example.com"
           git config --global credential.helper store
           echo "https://Nemophiliaa:${{ secrets.PAT }}@github.com" > ~/.git-credentials
 
