@@ -28,18 +28,13 @@ jobs:
           mlflow run MLProject --env-manager=local 
 
       - name: Save mlruns to Repo
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          USERNAME: ${{ secrets.USERNAME }}
-          EMAIL: ${{ secrets.EMAIL }}
-        run: |
-          git config --global user.name "${USERNAME}"
-          git config --global user.email "${EMAIL}"
-          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}
-          git add mlruns/
-          git commit -m "Save mlruns from CI run"
-          git push origin HEAD:main
-
+        run: | 
+          git config --global user.name ${{ secrets.username }}
+          git config --global user.email $ {{ secrets.email }}
+          git add mlruns/ 
+          git commit -m "save mlrun from CI" || true 
+          git push origin master
+     
 
 
    
