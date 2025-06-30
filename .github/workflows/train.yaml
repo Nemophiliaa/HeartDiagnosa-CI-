@@ -23,12 +23,12 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install mlflow
+          pip install mlflow scikit-learn pandas numpy
 
-      - name: Run MLflow Project
+      - name: Run MLflow Script Directly
         run: |
           export MLFLOW_TRACKING_URI=./mlruns
-          mlflow run MLProject --env-manager=local
+          python MLProject/modelling.py
 
       - name: Debug — List files
         run: ls -R
@@ -36,7 +36,7 @@ jobs:
       - name: Configure Git with PAT
         run: |
           git config --global user.name "Nemophiliaa"
-          git config --global user.email "neemophilia@example.com"
+          git config --global user.email "hirose@example.com"
           git remote set-url origin https://Nemophiliaa:${{ secrets.PAT }}@github.com/Nemophiliaa/HeartDiagnosa-CI-.git
 
       - name: Save mlruns to Repo
