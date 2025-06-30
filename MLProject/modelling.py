@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 
 warnings.filterwarnings('ignore')
 
-df = pd.read_csv('preprocessing/HeartDiagnosa_preprocessing.csv')
+df = pd.read_csv('MLProject/preprocessing/HeartDiagnosa_preprocessing.csv')
 
 X = df.drop('condition', axis=1 )
 y = df['condition']
