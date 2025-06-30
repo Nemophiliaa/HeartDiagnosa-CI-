@@ -28,13 +28,11 @@ jobs:
           mlflow run MLProject --env-manager=local 
 
       - name: Save mlruns to Repo
-        env: 
-          PAT: ${{ secrets.PAT }}
         run: |
-          git config --global user.name "${{ secrets.NAME }}"
-          git config --global user.email "${{ secrets.EMAIL }}"
+          git config --global user.name "Nemophiliaa"
+          git config --global user.email "hirose@example.com"
           git remote set-url origin https://Nemophiliaa:${{ secrets.PAT }}@github.com/Nemophiliaa/HeartDiagnosa-CI-.git
-          git add mlruns/ 
+          git add mlruns/
           git commit -m "save mlruns from CI" || echo "No changes to commit"
           git push origin main
 
