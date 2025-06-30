@@ -1,0 +1,14 @@
+artifact_uri: /home/runner/work/HeartDiagnosa-CI-/HeartDiagnosa-CI-/mlruns/0/495f9feb7c2547819c92f1b807b2d4bc/artifacts
+end_time: 1751274560634
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 495f9feb7c2547819c92f1b807b2d4bc
+run_name: loud-squid-904
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751274554755
+status: 3
+tags: []
+user_id: runner
