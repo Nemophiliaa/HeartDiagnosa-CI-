@@ -1,0 +1,14 @@
+artifact_uri: /home/runner/work/HeartDiagnosa-CI-/HeartDiagnosa-CI-/mlruns/0/f6919af2560b4aef8765ce15657124e8/artifacts
+end_time: 1751439104534
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f6919af2560b4aef8765ce15657124e8
+run_name: unique-ox-291
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751439097513
+status: 3
+tags: []
+user_id: runner
