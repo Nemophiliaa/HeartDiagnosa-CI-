@@ -1,0 +1,10 @@
+artifact_location: /home/runner/work/HeartDiagnosa-CI-/HeartDiagnosa-CI-/mlruns/0/models/m-5a3c78192f0c4d6f8c8993c141670974/artifacts
+creation_timestamp: 1751438280687
+experiment_id: '0'
+last_updated_timestamp: 1751438282560
+model_id: m-5a3c78192f0c4d6f8c8993c141670974
+model_type: null
+name: model
+source_run_id: 49f054d266764944977fc897c01fcc24
+status: 2
+status_message: null
