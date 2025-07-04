@@ -1,0 +1,14 @@
+artifact_uri: /home/runner/work/HeartDiagnosa-CI-/HeartDiagnosa-CI-/mlruns/0/b009886ed21d4149939e0376d76f2bcb/artifacts
+end_time: 1751603624178
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b009886ed21d4149939e0376d76f2bcb
+run_name: adventurous-shoat-59
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751603619925
+status: 3
+tags: []
+user_id: runner
