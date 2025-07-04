@@ -40,9 +40,10 @@ jobs:
 
       - name: Save mlruns to Repo
         run: |
-          if [ -d "mlruns" ]; then
+          if [ -d "mlruns" ]; then    
             git add mlruns/
             git commit -m "save mlruns from CI" || echo "No changes to commit"
             git push origin main
           else
             echo "Folder mlruns/ tidak ditemukan. Gagal menyimpan artefak."
+          fi
