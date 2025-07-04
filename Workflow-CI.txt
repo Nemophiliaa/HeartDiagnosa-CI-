@@ -1,0 +1,6 @@
+Nama : Yudhistira Dwi Putra Ambat 
+Repository GitHub:  
+https://github.com/Nemophiliaa/HeartDiagnosa-CI-
+
+Penjelasan Singkat:
+Proyek ini menggunakan MLflow untuk pelacakan eksperimen dan retraining model otomatis melalui `mlflow run`.
