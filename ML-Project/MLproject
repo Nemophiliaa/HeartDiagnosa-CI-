@@ -1,0 +1,9 @@
+name: HeartDiagnosaMLFlow
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      path_preprocessing: {type: str}
+    command: "python modelling.py --path_preprocessing {path_preprocessing}"
