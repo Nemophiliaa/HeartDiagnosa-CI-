@@ -28,12 +28,8 @@ with mlflow.start_run() :
     model.fit(X_train,y_train)
 
     accuracy = model.score(X_test,y_test)
-    mlflow.log_metric('accuracy', accuracy)
-
-    mlflow.sklearn.log_model(model, name="RandomForestClassifier" , input_example=input_example)
-
     print(f"Model trained with n_estimators={n_estimators}, max_depth={max_depth}")
     print(f"Accuracy on test set: {accuracy:.4f}")
 
-
+    
     
