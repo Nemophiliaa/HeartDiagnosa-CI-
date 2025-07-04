@@ -1,0 +1,14 @@
+artifact_uri: /home/runner/work/HeartDiagnosa-CI-/HeartDiagnosa-CI-/mlruns/0/3b504a43b71b47b09d3c8d05e77af512/artifacts
+end_time: 1751617115466
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 3b504a43b71b47b09d3c8d05e77af512
+run_name: loud-lamb-864
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751617109618
+status: 3
+tags: []
+user_id: runner
