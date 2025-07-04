@@ -27,7 +27,7 @@ jobs:
 
       - name: Run MLflow Project
         run: |
-          mlflow run . --env-manager=local -P path_preprocessing="ML-Project/preprocessing/HeartDiagnosa_preprocessing.csv"
+          mlflow run ML-Project --env-manager=local -P path_preprocessing="preprocessing/HeartDiagnosa_preprocessing.csv"
 
 
       - name: Debug — List files
