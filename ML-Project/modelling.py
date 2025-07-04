@@ -1,6 +1,7 @@
 import numpy as np 
 import pandas as pd 
 import mlflow
+import sys
 import random 
 import warnings
 from sklearn.ensemble import RandomForestClassifier
@@ -8,7 +9,10 @@ from sklearn.model_selection import train_test_split
 
 warnings.filterwarnings('ignore')
 
-df = pd.read_csv('MLProject/preprocessing/HeartDiagnosa_preprocessing.csv')
+# Ambil path file preprocessing dari parameter command line
+path_preprocessing = sys.argv[sys.argv.index("--path_preprocessing") + 1]
+df = pd.read_csv(path_preprocessing)
+
 
 X = df.drop('condition', axis=1 )
 y = df['condition']
