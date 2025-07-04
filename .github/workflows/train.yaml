@@ -1,19 +1,19 @@
 name: Train MLflow Model CI
 
-on: 
-  workflow_dispatch: 
-  push: 
-    paths: 
+on:
+  workflow_dispatch:
+  push:
+    paths:
       - 'MLProject/**'
 
-jobs: 
-  train: 
-    runs-on: ubuntu-latest    
-    steps: 
+jobs:
+  train:
+    runs-on: ubuntu-latest
+    steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
         with:
-          persist-credentials: false
+          persist-credentials: false 
 
       - name: Setup Python
         uses: actions/setup-python@v4
@@ -25,10 +25,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install mlflow scikit-learn pandas numpy
 
-      - name: Run MLflow Script Directly
+      - name: Run MLflow Project
         run: |
-          export MLFLOW_TRACKING_URI=./mlruns
-          python MLProject/modelling.py
+          mlflow run . -P path_preprocessing="MLProject/preprocessing/HeartDiagnosa_preprocessing.csv"
 
       - name: Debug — List files
         run: ls -R
@@ -47,4 +46,3 @@ jobs:
             git push origin main
           else
             echo "Folder mlruns/ tidak ditemukan. Gagal menyimpan artefak."
-          fi
