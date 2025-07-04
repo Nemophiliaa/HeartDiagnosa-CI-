@@ -1,0 +1,14 @@
+artifact_uri: /home/runner/work/HeartDiagnosa-CI-/HeartDiagnosa-CI-/mlruns/0/6202934b0e6043a7a4692c59a87f744b/artifacts
+end_time: 1751616774236
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6202934b0e6043a7a4692c59a87f744b
+run_name: thundering-newt-291
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751616768738
+status: 3
+tags: []
+user_id: runner
