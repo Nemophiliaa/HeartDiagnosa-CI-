@@ -27,7 +27,7 @@ jobs:
 
       - name: Run MLflow Project
         run: |
-          mlflow run . -P path_preprocessing="MLProject/preprocessing/HeartDiagnosa_preprocessing.csv"
+          mlflow run . -P path_preprocessing="ML-Project/preprocessing/HeartDiagnosa_preprocessing.csv"
 
       - name: Debug — List files
         run: ls -R
