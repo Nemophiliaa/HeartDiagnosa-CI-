@@ -1,0 +1,10 @@
+artifact_location: /home/runner/work/HeartDiagnosa-CI-/HeartDiagnosa-CI-/mlruns/0/models/m-c3ed654f861c499f831bfe96a6a5dc68/artifacts
+creation_timestamp: 1751288555072
+experiment_id: '0'
+last_updated_timestamp: 1751288558544
+model_id: m-c3ed654f861c499f831bfe96a6a5dc68
+model_type: null
+name: RandomForestClassifier
+source_run_id: 2a22c09840234246a65cc2cf7a0a7dd8
+status: 2
+status_message: null
