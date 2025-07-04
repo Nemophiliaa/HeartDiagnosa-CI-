@@ -9,7 +9,7 @@ from sklearn.model_selection import train_test_split
 
 warnings.filterwarnings('ignore')
 
-# Ambil path file preprocessing dari parameter command line
+# Ambil dari path file preprocessing dari parameter command line
 path_preprocessing = sys.argv[sys.argv.index("--path_preprocessing") + 1]
 df = pd.read_csv(path_preprocessing)
 
@@ -35,5 +35,4 @@ with mlflow.start_run() :
     print(f"Model trained with n_estimators={n_estimators}, max_depth={max_depth}")
     print(f"Accuracy on test set: {accuracy:.4f}")
 
-    
-    
+   
